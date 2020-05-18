@@ -1,1 +1,2 @@
-console.log('hello')
+console.log('Ping')
+console.log('Pong')

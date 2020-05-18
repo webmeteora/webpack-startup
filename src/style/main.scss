@@ -1,7 +1,50 @@
-body {
-  background-color: purple;
+@import "./modules/_vars";
+@import "./modules/_mixins";
+@import "./modules/_fonts";
+@import "./modules/_reset";
 
-  h2 {
-    color: yellow;
+html {
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+  height: 100%;
+  @media screen and (max-width: $screen-xl-min) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $screen-md-min) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: $screen-sm-min) {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.section-outer {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: rem(20);
+
+  @media (max-width: $screen-sm-max) {
+    color: $primary-color;
+  }
+
+  @media (min-width: $screen-md-min) {
+    color: $success-color
   }
 }
